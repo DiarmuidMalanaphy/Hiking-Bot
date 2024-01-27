@@ -37,6 +37,8 @@ def main(filename):
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         input_filename = sys.argv[1]
+        if not input_filename.lower().endswith('.csv'):
+            input_filename += '.csv'
         main(input_filename)
     else:
         print("Please provide a filename.")
